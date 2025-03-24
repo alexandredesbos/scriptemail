@@ -4,8 +4,14 @@ ouvre un terminal
 
 ```bash
 cd Documents/la ou tu veux mettre le script
+```
+```bash
 git clone https://github.com/alexandredesbos/scriptemail
+```
+```bash
 cd scriptemail
+```
+```bash
 pip install -r requirements.txt
 ```
 
