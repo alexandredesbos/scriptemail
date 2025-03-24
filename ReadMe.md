@@ -2,7 +2,7 @@ Pour executer le scipt:
 
 Installe python si tu l'as pas: https://www.python.org/downloads/
 
-Telecharge le dossier scriptemail: https://github.com/alexandredesbos/scriptemail
+Telecharge le dossier:
 ![aperçu du script](assets/images/github.png)
 
 ouvre un terminal 
