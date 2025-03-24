@@ -14,7 +14,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-with open("assets/testCategories.txt", "r", encoding="utf-8") as f:
+with open("assets/categories.txt", "r", encoding="utf-8") as f:
     categories = [line.strip() for line in f if line.strip()]
 
 os.makedirs(dossier_resultats, exist_ok=True)
@@ -24,10 +24,17 @@ ville = "75001+-+Paris+1er+Arrondissement&loc=2.3359%2C48.862"
 
 
 for categorie in categories:
-    cat_encoded = categorie.replace(" ", "+")
+    cat_encoded = (
+        categorie.replace(" ", "+")
+                .replace("/", "%2F")
+                .replace(":", "%3A")
+                .replace(",", "%2C")
+                .replace("'", "%27")
+    )
     
     url = f"https://france-renov.gouv.fr/annuaire-rge/recherche?localisation={ville}&distance=50&type={cat_encoded}"
     print(f"Traitement de : {categorie}")
+    print(f"URL : {url}")
     
     driver.get(url)
 
@@ -51,7 +58,8 @@ for categorie in categories:
             continue
 
     # Fichier de sortie
-    nom_fichier = f"Paris__{categorie.replace(' ', '_')}.txt"
+    nom_fichier_sanitized = categorie.replace(' ', '_').replace('/', '_').replace(':', '_').replace(',', '_').replace("'", "_")
+    nom_fichier = f"Paris__{nom_fichier_sanitized}.txt"
     with open(os.path.join(dossier_resultats, nom_fichier), "w", encoding="utf-8") as f:
         for ligne in resultats:
             f.write(ligne + "\n")
