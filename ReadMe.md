@@ -1,13 +1,12 @@
 Pour executer le scipt:
 
+Installe python si tu la pas: https://www.python.org/downloads/
+
+Telecharge le dossier scriptemail: https://github.com/alexandredesbos/scriptemail
+![aperçu du script](assets/images/github.png)
+
 ouvre un terminal 
 
-```bash
-cd Documents/la ou tu veux mettre le script
-```
-```bash
-git clone https://github.com/alexandredesbos/scriptemail
-```
 ```bash
 cd scriptemail
 ```
