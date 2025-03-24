@@ -7,8 +7,9 @@ Telecharge le dossier scriptemail: https://github.com/alexandredesbos/scriptemai
 
 ouvre un terminal 
 
+va dans le dossier scriptemail selon la ou tu l'as mis
 ```bash
-cd scriptemail
+cd Documents/scriptemail
 ```
 ```bash
 pip install -r requirements.txt
