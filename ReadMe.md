@@ -1,6 +1,6 @@
 Pour executer le scipt:
 
-Installe python si tu la pas: https://www.python.org/downloads/
+Installe python si tu l'as pas: https://www.python.org/downloads/
 
 Telecharge le dossier scriptemail: https://github.com/alexandredesbos/scriptemail
 ![aperçu du script](assets/images/github.png)
