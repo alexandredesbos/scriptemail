@@ -37,7 +37,7 @@ for categorie in categories:
     resultats = []
 
     for ville in villes:
-        nom_ville = ville.split("+-+")[1].split("+")[0]
+        nom_ville = ville.split("+-+")[1].split("&")[0]
         url = f"https://france-renov.gouv.fr/annuaire-rge/recherche?localisation={ville}&distance=50&type={cat_encoded}"
         print(f"Traitement de : {categorie} à {nom_ville}...")
         
