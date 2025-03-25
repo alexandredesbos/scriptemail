@@ -11,8 +11,13 @@ va dans le dossier scriptemail selon la ou tu l'as mis
 ```bash
 cd Documents/scriptemail
 ```
+
 ```bash
-pip install -r requirements.txt
+pip install --upgrade pip
+```
+
+```bash
+python -m pip install -r requirements.txt
 ```
 
 ```bash
