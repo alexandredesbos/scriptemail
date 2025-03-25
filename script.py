@@ -19,7 +19,7 @@ with open("assets/categories.txt", "r", encoding="utf-8") as f:
 
 os.makedirs(dossier_resultats, exist_ok=True)
 
-# Ville fixée à Paris
+# Ville hardcodée
 ville = "75001+-+Paris+1er+Arrondissement&loc=2.3359%2C48.862"
 
 
